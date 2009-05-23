@@ -1,3 +1,4 @@
 \select@language {ukrainian}
 \contentsline {section}{\numberline {1}\IeC {\CYRO }\IeC {\cyrs }\IeC {\cyrn }\IeC {\cyro }\IeC {\cyrv }\IeC {\cyrn }\IeC {\cyrii } \IeC {\cyrp }\IeC {\cyro }\IeC {\cyrn }\IeC {\cyrya }\IeC {\cyrt }\IeC {\cyrt }\IeC {\cyrya } \IeC {\cyrt }\IeC {\cyre }\IeC {\cyro }\IeC {\cyrr }\IeC {\cyrii }\IeC {\cyryi } \IeC {\cyrg }\IeC {\cyrr }\IeC {\cyra }\IeC {\cyrf }\IeC {\cyrii }\IeC {\cyrv }}{2}
 \contentsline {subsection}{\numberline {1.1}\IeC {\CYRG }\IeC {\cyrr }\IeC {\cyra }\IeC {\cyrf }\IeC {\cyri }}{3}
+\contentsline {section}{\IeC {\CYRL }\IeC {\cyrii }\IeC {\cyrt }\IeC {\cyre }\IeC {\cyrr }\IeC {\cyra }\IeC {\cyrt }\IeC {\cyru }\IeC {\cyrr }\IeC {\cyra }}{5}
