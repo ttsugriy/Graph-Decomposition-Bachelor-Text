@@ -1,10 +1,10 @@
 \begin{description}
-\item[Додавання вершини] Додавання вершини $u$ $G=(V,E)$ $u \not\in V$ $G=(V \cup \lbrace u \rbrace$ $G \cup \lbrace u \rbrace$
-\item[Видалення вершини]
-\item[Додавання ребра]
-\item[Видалення ребра]
-\item[Доповнення відносно ребер]
-\item[Об'єднання]
-\item[Декартовий добуток]
-\item[Злиття]
+\item[Додавання вершини] Додавання вершини $u$ до графу $G=(V,E)$, такої що $u \not\in V$, продукує новий граф $G=(V \cup \lbrace u \rbrace,E)$, який позначають $G \cup \lbrace u \rbrace$.
+\item[Видалення вершини] Видалення вершини $u$ з графу $G=(V,E)$ вилучає її, а також всі інцидентні їй ребра із множини вершин і ребер відповідно. Отриманий граф позначають $G-u$.
+\item[Додавання ребра] Додавання ребра $uv$ до графа $G=(V,E)$ продукує граф $G=(V \cup \lbrace u,v \rbrace, E \cup uv)$ і позначається $G \cup \lbrace uv \rbrace$.
+\item[Видалення ребра] Видалення ребра $uv$ вилучає його із множини ребер і позначається $G-uv$.
+\item[Доповнення відносно ребер] Доповненням відносно ребер графа $G=(V,E)$ є граф $\overline G=(V,E_n \setminus E)$, де $K_n=(V,E_n), \vert V \vert=n$, тобто граф, множиною вершин якого є всі вершини графа $G$, а множина ребер складається із усіх ребер повного графа, крім ребер, що належать графу $G$.
+\item[Об'єднання] Об'єднанням двох графів є $J=G+H=(V(G+H),E(G+H)$, де $$V(G+H)=V(G) \cup V(H)$$ $$E(G+H)=E(G) \cup E(H) \cup \lbrace uv \vert u \in V(G) \land v \in V(H) \rbrace$$
+\item[Декартовий добуток] Декартовим добутком двох графів $G_1=(V_1,E_1)$ та $G_2=(V_2,E_2)$ є граф $G=G_1 \times G_2=(V,E)$, де $$V=V_1 \times V_2=\lbrace \lbrack u,v \rbrack \vert u \in V_1, v \in V_2 \rbrace$$ та $E=\lbrace \lbrack u,v \rbrack \lbrack u^\prime,v^\prime \rbrack \vert (uu^\prime \in E_1 \land v=v^\prime) \lor (vv^\prime \in E_2 \land u=u^\prime) \rbrace.$.
+\item[Злиття] Злиттям графів $G_1=(V_1,E_1)$ та $G_2=(V_2,E_2)$ є граф $U=G_1 \cup G_2=(V_1 \uplus V_2,E_1 \uplus E_2)$.
 \end{description}
