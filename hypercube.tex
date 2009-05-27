@@ -1,0 +1,15 @@
+\begin{tikzpicture}
+  \grCycle[RA=6]{8}
+  \pgfmathparse{8*(1-4*sin(22.5)*sin(22.5))}
+  \let\tkzbradius\pgfmathresult
+  \grCirculant[prefix=b,RA=\tkzbradius]{8}{3}
+  \makeatletter
+  \foreach \vx in {0,...,7}{%
+    \pgfmathsetcounter{tkzb@next}{mod(\vx+1,8)}
+    \pgfmathsetcounter{tkzb@ca}{mod(\vx+7,8)}
+    \pgfmathsetcounter{tkzb@cb}{mod(\thetkzb@next+1,8)}
+    \Edge(a\thetkzb@next)(b\thetkzb@cb)
+    \Edge(b\thetkzb@ca)(a\vx)
+  }
+  \makeatother
+\end{tikzpicture}
