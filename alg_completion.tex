@@ -1,0 +1,19 @@
+\begin{algorithm}
+  \caption{Завершення}
+  \label{completion}
+  \begin{algorithmic}[1]
+    \REQUIRE $G$ і маркувальна функція $f$ для всіх вершин одиничного розрізу
+    \ENSURE маркувальня функція $f$ для всіх вершин в $G$
+    \STATE Обчислити $d_{max}=max_{v \in G}d_G(v_0,v)$, де $v_0$ є початком
+    \FOR{$k:=2$ до $d_{max}$}
+    \FORALL{немаркованих вершин $v$ в рівні $k$}
+    \STATE{Обрати довільну вершину $u$ в рівні $k-1$ інцидентну $v$}
+    \STATE{Знайти вершину $w$ в рівні $k-1$ інцидентну $v$, таку що маркери $u$ та $w$ різняться точно в двох компонентах, скажімо $i$ та $j$}    
+    \STATE{Присвоїти вершині $v$ маркер наступним чином:\\
+    $f(v,l)=f(u,l)$, для всіх $l, l \ne i, l \ne j$\\
+    $f(v,i)=max \lbrace f(u,i),f(w,i) \rbrace$\\
+    $f(v,j)=max \lbrace f(u,j),f(w,j) \rbrace$}
+    \ENDFOR
+    \ENDFOR
+  \end{algorithmic}
+\end{algorithm}

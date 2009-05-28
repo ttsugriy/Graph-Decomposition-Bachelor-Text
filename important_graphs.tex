@@ -1,22 +1,37 @@
 \begin{description}
         \item[Порожній граф] Граф, що має $n$ вершин та жодного ребра називається порожнім графом $\overline{K_n}$.
-          \begin{tikzpicture}
-            \SetVertexMath
-            \GraphInit[vstyle=Classic]
-            \grEmptyCycle[prefix=v,RA=1]{5}
-          \end{tikzpicture}
+          \begin{figure}[h]
+            \centering
+            \begin{tikzpicture}
+              \SetVertexMath
+              \GraphInit[vstyle=Classic]
+              \grEmptyCycle[prefix=v,RA=1]{5}
+            \end{tikzpicture}
+            \caption{Порожній граф $\overline{K_5}$}
+            \label{empty_graph_5}
+          \end{figure}
         \item[Тривіальним] називається порожній граф $K_1$ з однією вершиною.
         \item[Нуль-граф] Порожній граф без вершин називаються нуль-графом $K_0$.
         \item[Повний] $\vert V \vert = n$ $E = {V \choose 2}$ (всі вершини з'єднані ребрами) - повний граф $K_n = (V,E)$.
-          \begin{tikzpicture}
-            \GraphInit[vstyle=Art]
-            \grComplete[RA=2]{6}
-          \end{tikzpicture}
+          \begin{figure}[h]
+            \centering
+            \begin{tikzpicture}
+              \GraphInit[vstyle=Art]
+              \grComplete[RA=2]{6}
+            \end{tikzpicture}
+            \caption{Повний граф $K_6$}
+            \label{complete_graph_6}
+          \end{figure}
         \item[Дводольний] Граф $G = (L \cup R,E)$ називають дводольним, якщо $V$ складається з двох множин $L$ і $R$, що не перетинаються, тобто $L \cap R = \emptyset$ і кожне ребро складається з вершин, одна з яких належить $L$, а друга - $R$. Якщо ж між усіма вершинами $L$ і $R$ існують всі ребра, то такий граф називають повним дводольним $K_{L,R}$, або $K_{m,n}$, якщо $\vert L \vert = m, \vert R \vert = n$.
-          \begin{tikzpicture}
-            \GraphInit[vstyle=Art]
-            \grCompleteBipartite[RA=2,RB=2,RS=3]{3}{2}
-          \end{tikzpicture}
+          \begin{figure}[h]
+            \centering
+            \begin{tikzpicture}
+              \GraphInit[vstyle=Art]
+              \grCompleteBipartite[RA=2,RB=2,RS=3]{3}{2}
+            \end{tikzpicture}
+            \caption{Повний дводольний граф $K_{3,2}$}
+            \label{bipartite_graph_3_2}
+          \end{figure}
         \item[Повний $r$-дольний] Узагальненням повного дводольного є повний $k$-дольний граф $K_{n_1,\dots,n_k}$ у якого:
         \begin{itemize}     
         \item $V=V_1 \cup \dots \cup V_k$ та $V_i \cap V_j = \emptyset$ для всіх $i \ne j$
@@ -24,5 +39,10 @@
         \item $E = \lbrace uv : xu \in E_i, v \in E_j, i \ne j \rbrace$
         \end{itemize}
         \item[Гіперкубом] $Q_n$ називається регулярний граф з $2n$ вершинами, які відповідають підмножинам множини з $n$ елементів. Дві вершини, позначені підмножинами $S$ і $T$ тоді і тільки тоді, коли $S$ може бути отрамана з $T$ шляхом видалення або додавання єдиного елемента. Кожна вершина $Q_n$ інцидентна $n$ ребрам, тобто він $n$-регулярний.
-          \input hypercube
+          \begin{figure}[h]
+            \centering
+            \input hypercube
+            \caption{Гіперкуб $Q_4$}
+            \label{hypercube_4}
+          \end{figure}
 \end{description}

@@ -1,0 +1,21 @@
+\begin{algorithm}
+  \caption{Об'єднання}
+  \label{combine}
+  \begin{algorithmic}[1]
+    \REQUIRE Дві вершини $u$, $v$ $i, 1 \le i \le t$.
+    \ENSURE Нове маркування для усіх маркованих вершин, $u$ та $v$ і усі вершини на найкоротшому шляху від $u$ чи $v$ до $v_0$ є вершинами одиничного розрізу в $i$-му одиничному розрізі.
+    \STATE Обчислити $Index:= \lbrace j \vert f(u,j) \ne 0 \lor f(v,j) \ne 0 \lor j = i \rbrace$.
+    \IF{$\vert Index \vert = 1$}
+    \RETURN
+    \ENDIF
+    \STATE{Обчислити $U$, множину усіх вершин одиничного розрізу в новому одиничному розрізі.
+    $U:= \lbrace v \in V \vert v$ є маркованою $\land f(v,j) \ne 0 \Rightarrow j \in Index(U) \rbrace$;
+    маркувати всі вершини в $U$}
+    \STATE{Присвоїти новий маркер кожній маркованій вершині $v$ наступним чином:\\
+      $f(v,j)$ залишається без змін для $j \not\in Index$;\\
+      $f(v,i)=v^\prime$, де $v^\prime$ вершина одиничного розрізу з наступною властивістю:\\
+      $f(v^\prime,j)=f(v,j)$ для всіх $j \in Index, f(v^\prime,k)=0$ для всіх $j \not\in Index$.
+    }
+    \STATE{Скоректувати список і масив маркерів.}
+  \end{algorithmic}
+\end{algorithm}
