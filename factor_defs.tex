@@ -37,7 +37,8 @@
       \item Для кожної вершини в рівні $i < d_{max}$ справедливе $6)$, і для кожної вершини $v$ в рівні $d_{max}$ існує ребро $uv$ в факторі $k$ тоді і тільки тоді, якщо існує ребро $f(v,k)f(u,k)$ в факторі $k$ і $f(u,k)$ в не вищому рівні ніж $f(v,k)$.
     \end{enumerate}
     \item[$Index(u,v,i)$] $:=\lbrace j \vert f(u,j) \ne 0 \lor f(v,j) \ne 0 \lor j = i \rbrace$.
-    \item[Функція об'єднання $Combine (u,v;i)$] є функцією $Combine : f \to f^\prime$, де $Combine(f(w))=f^\prime(w)$, де в свою чергу:
+    \item[Функція Об'єднання$(u,v;i)$] є функцією Об'єднання $: f \to f^\prime$,\\
+      де Об'єднання$(f(w))=f^\prime(w)$, де в свою чергу:
       \begin{enumerate}
         \item $f^\prime(w,j):=f(w,j)$, якщо $j \not\in Index$.
         \item $f^\prime(w,i):=x$, якщо $f(x,j)=f(w,j)$ для всіх $j \in Index$ та $f(x,j) = 0$ для $j \not\in Index$.
