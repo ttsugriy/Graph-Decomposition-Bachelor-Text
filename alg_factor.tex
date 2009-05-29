@@ -1,0 +1,44 @@
+\begin{algorithm}
+  \caption{Факторизація}
+  \label{alg:factor}
+  \begin{algorithmic}[1]
+    \REQUIRE{Довільний зв'язний граф $G=(V,E)$ у вигляді списку суміжності, $\vert V \vert = n$, $\vert E \vert = m$.}
+    \ENSURE{Маркувальна функція добутку $f$ графа $G$. $G$ є декартовим добутком одиничних розрізів $f$, усі одиничні розрізи є простими.}
+    \STATE{Ініціалізація:
+    \begin{enumerate}
+      \setlength{\itemsep}{1pt}
+      \setlength{\parskip}{0pt}
+      \item Обрати довільну вершину $v_0$ за найменшим локальним степенем.
+      \item Змінити назви вершин і скорегувати список суміжності вхідного графа так що $v=BFSNUM(v)$ і визначити $d_{max}$.
+      \item $f(v_0,0)=0$, для $1 \le i \le t_0$. Вершина $v_0$ є початком, $t_0=deg(v_0)$.
+      \item Нехай $v_1,\dots,v_{t_0}$ вершини інцидентні $v_0$.
+        $f(v_i,i)=v_i$, $f(v_i,j)=0$ для $1 \le i \le t_0$, $i \ne j$.
+      \item Виконати Перевірку на Сумісність для рівня 1.
+    \end{enumerate}}
+    \FORALL{рівнів $k$ від 2 до $d_{max}$}
+    \FORALL{вершин $v$ в рівні $k$}
+    \STATE{Присвоїти маркер вершині $v$ наступним чином:
+      \begin{enumerate}
+        \renewcommand{\theenumi}{\Roman{enumi}}
+        \setlength{\itemsep}{1pt}
+        \setlength{\parsep}{0pt}
+        \setlength{\parskip}{0pt}
+        \item Обрати першу вершину $u$ в рівні $k-1$ інцидентну $v$.
+        \item Знайти вершину $w$ в рівні $k-1$ інцидентну $v$, таку що маркери $u$ та $w$ різняться точно в двох компонентах.
+        \item Якщо пошук в II. не успішний, то для кожної вершини $u^\prime$ інцидентної $v$ в рівні $k-1$ виконати $Combine(u,u^\prime;i)$, де $i$ - довільна ненульова компонента $u$.
+        \item $f(v,i)=v$; $f(v,j)=0$ $j \ne i$; вершина $v$ тепер сумісно маркована, $v$ та всі $u^\prime$ є вершинами одиничного розрізу в $i$-му одиничному розрізі. Перевірити наступну вершину.
+        \item Якщо пошук в II. успішний, то
+          \begin{itemize}
+            \setlength{\itemsep}{1pt}
+            \setlength{\parskip}{0pt}
+            \item $f(v,i)=f(u,i)$ для $1 \le i \le t$; $i \ne j$, $i \ne l$;
+            \item $f(v,j)=max \lbrace f(u,j),f(w,j) \rbrace$;
+            \item $f(v,l)=max \lbrace f(u,l),f(w,l) \rbrace$;
+            \item де $j$ та $l$ компоненти, в яких $u$ та $w$ різняться.
+          \end{itemize}
+          Тепер $v$ маркована, необов'язково сумісно.
+    \end{enumerate}}
+    \ENDFOR{ Тепер усі вершини в рівні $k$ марковано. Виконати Тест на Сумісність для рівня $k$.}
+    \ENDFOR
+  \end{algorithmic}
+\end{algorithm}
