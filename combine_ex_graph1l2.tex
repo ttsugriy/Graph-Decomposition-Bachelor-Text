@@ -1,0 +1,24 @@
+\begin{tikzpicture}
+  \tikzset{node distance = 2cm}
+  \Vertex{00}
+  \NO(00){20}
+  \WE(20){10}
+  \EA(20){03}
+  \NO(20){13}
+  \WE(13){40}
+  \EA(13){23}
+
+  \tikzset{EdgeStyle/.style = {-, thick, double = black,
+      double distance = 1pt}}
+  \Edge(00)(10)
+  \Edge(00)(20)
+  \Edge(20)(40)
+  \Edge(03)(13)
+  \Edge(10)(40)
+  \Edge(03)(23)
+  \tikzset{EdgeStyle/.style = {-, thick, double = white,
+      double distance = 1pt}}
+  \Edge(10)(13)
+  \Edge(20)(23)
+  \Edge(00)(03)
+\end{tikzpicture}

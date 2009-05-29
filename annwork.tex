@@ -10,6 +10,9 @@
 \usepackage{geometry}
 \usepackage{algorithm}
 \usepackage{algorithmic}
+\usepackage{subfig}
+\usepackage{url}
+\usepackage{indentfirst}
 
 \floatname{algorithm}{Алгоритм}
 \renewcommand{\algorithmicrequire}{\textbf{Вхід:}}
@@ -39,6 +42,8 @@
 \geometry{top=2cm}
 \geometry{bottom=1.5cm}
 
+\linespread{1.3} % 1.5
+
 \graphicspath{{./images/}}
 
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
@@ -51,6 +56,11 @@
 \input title
 
 \tableofcontents
+\newpage
+
+\section*{Вступ}
+\addcontentsline{toc}{section}{Вступ}
+\input intro
 \newpage
 
 \section{Основні поняття теорії графів}

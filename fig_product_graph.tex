@@ -1,0 +1,17 @@
+\begin{tikzpicture}[node distance=1.5cm]
+  \Vertex{0}
+  \NO(0){2}
+  \WE(2){1}
+  \EA(2){3}
+  \NO(1){4}
+  \NO(2){5}
+  \NO(3){6}
+  \NO(5){7}
+  \Edges(0,2,4,1,2,0,1)
+  \Edges(3,6,7,5,6,3,5)
+  \tikzstyle{EdgeStyle}=[-,ultra thick]
+  \Edge(0)(3)
+  \Edge(2)(6)
+  \Edge(1)(5)
+  \Edge(4)(7)
+\end{tikzpicture}
