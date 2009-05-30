@@ -13,6 +13,12 @@
 \usepackage{subfig}
 \usepackage{url}
 \usepackage{indentfirst}
+%\usepackage{fancyhdr}
+
+%\pagestyle{fancy}
+%\fancyhf{}
+%\fancyhead[R]{\thepage}
+%\renewcommand{\headrulewidth}{0pt}
 
 \floatname{algorithm}{Алгоритм}
 \renewcommand{\algorithmicrequire}{\textbf{Вхід:}}
@@ -36,7 +42,6 @@
 \renewcommand{\algorithmicprint}{\textbf{друк}}
 \renewcommand{\algorithmicreturn}{\textbf{повернути}}
 
-
 \geometry{left=3cm}
 \geometry{right=2cm}
 \geometry{top=2cm}
@@ -58,7 +63,7 @@
 \tableofcontents
 \newpage
 
-\section*{Вступ}
+\section*{\centering Вступ}
 \addcontentsline{toc}{section}{Вступ}
 \input intro
 \newpage
@@ -69,6 +74,11 @@
 
 \section{Проблема декомпозиції графів}
 \input factor_task
+
+\clearpage
+\section*{\centering Висновок}
+\addcontentsline{toc}{section}{Висновок}
+\input conclusion
 
 \clearpage
 \addcontentsline{toc}{section}{Література}
