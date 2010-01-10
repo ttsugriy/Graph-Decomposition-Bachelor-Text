@@ -1,0 +1,36 @@
+\begin{thebibliography}{1}
+
+\bibitem{aurenhammer1992cgflce}
+F.~Aurenhammer, J.~Hagauer, and W.~Imrich.
+\newblock {Cartesian graph factorization at logarithmic cost per edge}.
+\newblock {\em Computational Complexity}, 2(4):331--349, 1992.
+
+\bibitem{feder1992pgr}
+T.~Feder.
+\newblock {Product graph representations}.
+\newblock {\em Journal of Graph Theory}, 16(5), 1992.
+
+\bibitem{feigenbaum1985ptafpfcpg}
+J.~Feigenbaum, J.~Hershberger, and A.~Schaeffer.
+\newblock {Polynomial time algorithm for finding the prime factors of
+  Cartesian-product graphs.}
+\newblock {\em Discrete Appl. Math.}, 12(2):123--138, 1985.
+
+\bibitem{web:ibm_soft_boost}
+Martin LaMonica.
+\newblock Ibm software boosts info on demand.
+\newblock
+  \url{http://news.cnet.com/2100-7345_3-6159025.html?part=rss&tag=2547-1_3-0-2%
+0&subj=news}, February 2007.
+
+\bibitem{sabidussi1959gm}
+G.~Sabidussi.
+\newblock {Graph multiplication}.
+\newblock {\em Mathematische Zeitschrift}, 72(1):446--457, 1959.
+
+\bibitem{vizing1963cpf}
+VG~Vizing.
+\newblock {The cartesian product of graphs}.
+\newblock {\em Vycisl. Sistemy}, 9:30--43, 1963.
+
+\end{thebibliography}
